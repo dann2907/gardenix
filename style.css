@@ -1,0 +1,306 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #a8e0e0, #74b9b0);
+    background-image: url('gambar/kebun.jpeg');
+    /* Ganti dengan gambar kebun */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #000000;
+}
+
+
+/* Navbar styling */
+
+nav {
+    font-family: Georgia, serif;
+    margin-bottom: 20px;
+}
+
+.navbar-brand img {
+    max-width: 50px;
+    /* Atur ukuran logo */
+    z-index: 2;
+}
+
+.navbar {
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    background-color: rgb(12, 1, 1);
+}
+
+
+/* Section styling dengan transparansi */
+
+section {
+    font-family: Georgia, serif;
+    background-color: rgba(150, 237, 179, 0.3);
+    /* Transparansi */
+    padding: 50px 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+/* Mengatur background gambar pada section Home */
+
+section#home {
+    position: relative;
+    background-image: url('gambar/kebun.jpeg');
+    /* Ganti dengan gambar kebunmu */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 150px 0;
+    /* Menambah ruang vertikal agar teks di tengah */
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+
+/* Membuat overlay transparan di atas gambar */
+
+section#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Overlay gelap transparan */
+    z-index: 1;
+}
+
+
+/* Mengatur teks agar berada di atas overlay */
+
+section#home h1,
+section#home p {
+    position: relative;
+    z-index: 2;
+    /* Teks berada di atas overlay */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Efek shadow pada teks */
+}
+
+
+/* Section Services */
+
+section#services {
+    position: relative;
+    padding: 50px 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #fcfbfb;
+}
+
+
+/* Teks berada di atas overlay pada Services */
+
+section#services h2,
+section#services p {
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Section Monitoring */
+
+section#monitoring {
+    background-color: rgba(150, 237, 179, 0.3);
+    padding: 70px 0;
+    text-align: center;
+    color: #000000; /* Pastikan teks lainnya berwarna hitam */
+}
+
+
+/* Overlay untuk section Monitoring */
+
+section#monitoring::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Overlay gelap transparan */
+    z-index: 1;
+}
+
+
+/* Teks berada di atas overlay pada Monitoring */
+
+section#monitoring h1,
+section#monitoring .sensor-data {
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Section Contact Us */
+
+section#contact {
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Overlay untuk section Contact Us */
+
+section#contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Overlay gelap transparan */
+    z-index: 1;
+}
+
+
+/* Teks berada di atas overlay pada Contact Us */
+
+section#contact h1,
+section#contact form {
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Form Contact us dengan transparansi */
+
+section#contact form {
+    background-color: rgba(18, 61, 36, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Mengatur grid pada sensor data */
+
+.sensor-data {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+
+/* Styling untuk tampilan data sensor */
+
+.sensor-data p {
+    background-color: #ffffff; /* Latar belakang putih */
+    color: #000000; /* Warna teks hitam */
+    padding: 15px;
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sedikit bayangan untuk membuat lebih menonjol */
+}
+
+
+/* Tombol transparan */
+
+button {
+    background-color: rgba(76, 175, 80, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Hover effect untuk tombol */
+
+button:hover {
+    background-color: rgba(158, 162, 159, 0.3);
+}
+
+
+/* Contact section form styling */
+
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form .form-control {
+    margin-bottom: 15px;
+}
+
+form .btn {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+/* Footer styling */
+
+footer {
+    background-color: #ffffff;
+    /* Transparan untuk footer */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.footer-content {
+    margin: 0 auto; /* Mengatur konten di tengah */
+}
+
+.footer-content p {
+    margin: 5px 0; /* Jarak antar paragraf */
+    color: #333; /* Warna teks */
+}
+
+footer p {
+    margin: 5px 0;
+    color: black;
+}
+
+
+footer .copyright {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+
+/* Slogan di atas copyright */
+
+footer .slogan {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
